@@ -7295,3 +7295,46 @@
 .error-one .button-box{
 	margin-top:30px;
 }
+/* // */
+
+.tabs {
+	display: flex;
+	background-color: #000;
+	color: white;
+	font-weight: bold;
+	justify-content: center;
+  }
+  .tab {
+	flex: 1;
+	text-align: center;
+	padding: 15px;
+	cursor: pointer;
+	border-bottom: 3px solid transparent;
+  }
+  .tab.active {
+	border-bottom: 3px solid gold;
+  }
+  .form-container {
+	background-color: #eef2ef;
+	padding: 20px;
+	display: none;
+  }
+  .form-container.active {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+  }
+  .form-item {
+	flex: 1 1 200px;
+	display: flex;
+	flex-direction: column;
+  }
+  .button {
+	background-color: gold;
+	color: black;
+	font-weight: bold;
+	padding: 10px 20px;
+	align-self: center;
+	border: none;
+	cursor: pointer;
+  }
