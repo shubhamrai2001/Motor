@@ -1,4 +1,4 @@
-/* Gear & Adventure Biker & Hiker Business HTML-5 Template */
+/* Gear & Adventure Biker & Hiker Business  */
 
 /*** 
 
@@ -2512,7 +2512,7 @@
 	position: absolute;
 	left: 0px;
 	right: 0px;
-	bottom: 35px;
+	bottom: -2px;
 	z-index: 10;
 	text-align: center;
 }
@@ -7296,45 +7296,130 @@
 	margin-top:30px;
 }
 /* // */
-
+/* Tab Styling */
 .tabs {
-	display: flex;
-	background-color: #000;
-	color: white;
-	font-weight: bold;
-	justify-content: center;
-  }
-  .tab {
-	flex: 1;
-	text-align: center;
-	padding: 15px;
-	cursor: pointer;
-	border-bottom: 3px solid transparent;
-  }
-  .tab.active {
-	border-bottom: 3px solid gold;
-  }
-  .form-container {
-	background-color: #eef2ef;
-	padding: 20px;
-	display: none;
-  }
-  .form-container.active {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-  }
-  .form-item {
-	flex: 1 1 200px;
-	display: flex;
-	flex-direction: column;
-  }
-  .button {
-	background-color: gold;
-	color: black;
-	font-weight: bold;
-	padding: 10px 20px;
-	align-self: center;
-	border: none;
-	cursor: pointer;
-  }
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+    z-index: 10;
+}
+
+.tab {
+    padding: 12px 24px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: 600;
+    border-radius: 4px 4px 0 0;
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.tab.active {
+    background: #fff;
+    color: #000;
+    border-bottom: 3px solid var(--main-color);
+}
+
+/* Form Container Styling */
+.form-container {
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+.form-container.active {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    align-items: end;
+}
+
+/* Form Item Styling */
+.form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item label {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-item select,
+.form-item input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.2s ease;
+}
+
+.form-item select:focus,
+.form-item input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
+}
+
+/* Submit Button Styling */
+.button {
+    grid-column: 1 / -1;
+    padding: 12px;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+		/* color: var(--main-color); */
+
+}
+
+.button:hover {
+    background: var(--main-color);
+    transform: translateY(-1px);
+}
+
+/* Slider Arrows */
+.main-slider-prev, 
+.main-slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.main-slider-prev {
+    left: 20px;
+}
+
+.main-slider-next {
+    right: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}

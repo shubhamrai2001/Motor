@@ -1,0 +1,285 @@
+.itinerary {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.itinerary h2 {
+  color: white;
+  font-size: 1.6rem;
+  border-bottom: 2px solid rgb(190, 126, 93);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.event-detail_list {
+  list-style: none;
+  padding: 0;
+}
+
+.event-detail_list li {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align :left;
+  margin-bottom: 15px;
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.day-label {
+  border: 2px solid rgb(190, 126, 93);
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: white;
+  min-width: 80px;
+}
+
+.day-description {
+  flex: 1;
+  min-width: 200px;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background: rgb(190, 126, 93);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 0;
+}
+
+.download-btn:hover {
+  background: #a8633d;
+}
+
+@media (max-width: 600px) {
+  .event-detail_list li {
+    flex-direction: column;
+  }
+
+  .day-label {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+
+
+
+.trip-details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* Navigation Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #eef2f5;
+  padding: 10px 0;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.tabs a {
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.tabs a:hover {
+  background: var(--main-color);
+  color: white;
+  border-radius: 5px;
+}
+
+/* Sections */
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--main-color);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.route {
+  font-weight: bold;
+  padding: 10px 10px;
+  margin-bottom: 1rem;
+  color: #444;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid rgb(190, 126, 93);
+  /* Border thickness and color */
+
+}
+
+.read-more {
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+/* List Styles */
+.itinerary-list li,
+section ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+
+/* Button */
+.download-btn {
+  padding: 10px 20px;
+  background: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background: #005fa3;
+}
+
+/* Reviews */
+.reviews .review {
+  background: #f0f8ff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid var(--main-color);
+  border-radius: 6px;
+}
+
+.review .stars {
+  color: gold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .trip-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabs a {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .download-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .review {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  .route {
+    font-size: 0.9rem;
+  }
+
+  .tabs a {
+    font-size: 0.95rem;
+  }
+}
+
+/* // */
+
+/* Accordion Itinerary Styles */
+.itinerary-accordion {
+    margin: 30px 0;
+}
+
+.itinerary-item {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.itinerary-header {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(190, 126, 93);
+    color: white;
+}
+
+.itinerary-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    margin-left: 15px;
+}
+
+.itinerary-content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.itinerary-content-inner {
+    padding: 15px 0;
+}
+
+.itinerary-item.active .itinerary-content {
+    max-height: 500px;
+    padding: 0 20px 15px;
+}
+
+.itinerary-item.active .toggle-icon {
+    transform: rotate(0deg);
+}
+
+.distance-duration {
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
